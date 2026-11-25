@@ -1,0 +1,20 @@
+{
+  "pipeline_version": "week3-v1",
+  "generated_at_utc": "2026-11-12T15:46:09.891528+00:00",
+  "records": [
+    {
+      "source_id": "S01",
+      "project_source_id": "K1",
+      "source_filename": "SEDG-v2.pdf",
+      "source_sha256": "c7699997922c6735ceb1ae494eb2511841c66bd03a228807ae15eba3730ace19",
+      "source_role": "disclosure_guidance",
+      "source_version": "Version 2, July 2025 (from Topic 2 source register; reconfirm)",
+      "source_url": "https://sedg.capitalmarketsmalaysia.com/wp-content/uploads/2025/07/SEDG-v2.pdf",
+      "access_rights": "Public URL; redistribution not verified",
+      "prepared_output": "data/processed/prepared_text.jsonl",
+      "prepared_sha256": "45f826424139dd72dbe2efa8f5de2505b88e7a31e33c53dbb642ec28ae5e7680",
+      "processing_note": "K1 selected physical pages=[26, 30, 34, 46, 53, 62, 65, 75]; conservative text cleanup; pdf-page-aware-paragraph-aware-char-500; columns require manual inspection",
+      "status": "Prepared in this session; manual layout quality review pending"
+    }
+  ]
+}

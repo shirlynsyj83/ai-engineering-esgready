@@ -1,0 +1,27 @@
+record_id,source,pdf_page_1based,candidate_disclosure_id,action
+K1-p0026-c001,SEDG-v2.pdf,26,SEDG-E2.1,Retain selected span(s)
+K1-p0026-c002,SEDG-v2.pdf,26,SEDG-E2.1,Retain selected span(s)
+K1-p0026-c003,SEDG-v2.pdf,26,SEDG-E2.1,Omit from clean set; preserved in original
+K1-p0030-c001,SEDG-v2.pdf,30,SEDG-E3.1,Retain selected span(s)
+K1-p0030-c002,SEDG-v2.pdf,30,SEDG-E3.1,Retain selected span(s)
+K1-p0030-c003,SEDG-v2.pdf,30,SEDG-E3.1,Omit from clean set; preserved in original
+K1-p0034-c001,SEDG-v2.pdf,34,SEDG-E4.1,Omit from clean set; preserved in original
+K1-p0034-c002,SEDG-v2.pdf,34,SEDG-E4.1,Retain selected span(s)
+K1-p0034-c003,SEDG-v2.pdf,34,SEDG-E4.1,Omit from clean set; preserved in original
+K1-p0034-c004,SEDG-v2.pdf,34,SEDG-E4.1,Omit from clean set; preserved in original
+K1-p0046-c001,SEDG-v2.pdf,46,SEDG-S2.1,Retain selected span(s)
+K1-p0046-c002,SEDG-v2.pdf,46,SEDG-S2.1,Omit from clean set; preserved in original
+K1-p0046-c003,SEDG-v2.pdf,46,SEDG-S2.1,Omit from clean set; preserved in original
+K1-p0053-c001,SEDG-v2.pdf,53,SEDG-S4.1,Retain selected span(s)
+K1-p0053-c002,SEDG-v2.pdf,53,SEDG-S4.1,Omit from clean set; preserved in original
+K1-p0053-c003,SEDG-v2.pdf,53,SEDG-S4.1,Omit from clean set; preserved in original
+K1-p0053-c004,SEDG-v2.pdf,53,SEDG-S4.1,Omit from clean set; preserved in original
+K1-p0062-c001,SEDG-v2.pdf,62,SEDG-G1.1,Retain selected span(s)
+K1-p0062-c002,SEDG-v2.pdf,62,SEDG-G1.1,Omit from clean set; preserved in original
+K1-p0062-c003,SEDG-v2.pdf,62,SEDG-G1.1,Omit from clean set; preserved in original
+K1-p0065-c001,SEDG-v2.pdf,65,SEDG-G2.1,Retain selected span(s)
+K1-p0065-c002,SEDG-v2.pdf,65,SEDG-G2.1,Omit from clean set; preserved in original
+K1-p0075-c001,SEDG-v2.pdf,75,SEDG-G4.1,Retain selected span(s)
+K1-p0075-c002,SEDG-v2.pdf,75,SEDG-G4.1,Omit from clean set; preserved in original
+K1-p0075-c003,SEDG-v2.pdf,75,SEDG-G4.1,Omit from clean set; preserved in original
+K1-p0075-c004,SEDG-v2.pdf,75,SEDG-G4.1,Omit from clean set; preserved in original

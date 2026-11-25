@@ -1,10 +1,18 @@
+# ESGReady Topic 3: local third-party reference PDFs and temporary Colab inputs
 .DS_Store
-.env
-.env.*
-*.key
-*.pem
-*.csv
-*.parquet
-*.pdf
-.venv/
-__pycache__/
+__MACOSX/
+.ipynb_checkpoints/
+data/raw/
+data/reference_private/
+# Prepared exports may reproduce third-party reference text. Do NOT commit by default.
+data/processed/*.jsonl
+data/pipeline_v1/**/*.jsonl
+# Git manifests are metadata only; inspect paths and permissions before sharing.
+
+# Private, reproducible copies of K1-derived text until sharing terms are settled.
+data/prepared_chunks*.jsonl
+data/chunks*.pkl
+
+# Submission archives are delivered separately.
+ESGReady_private_assessment.zip
+ESGReady_GitHub_upload.zip

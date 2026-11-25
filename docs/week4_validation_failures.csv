@@ -1,0 +1,14 @@
+rule,record_id,page,length,distinct_ids,severity,decision
+one_id_at_most,K1-p0026-c001,26,500,2,Review,Mixed IDs; retain only the visually checked target span.
+length_review,K1-p0026-c003,26,80,0,Review,"Reference tail, outside selected criterion; exclude from reviewed text."
+one_id_at_most,K1-p0030-c001,30,499,2,Review,Mixed IDs; retain only the visually checked target span.
+length_review,K1-p0030-c003,30,91,0,Review,"Reference tail, outside selected criterion; exclude from reviewed text."
+one_id_at_most,K1-p0034-c001,34,498,2,Review,Advanced criteria only; exclude. Waste target starts in c002.
+one_id_at_most,K1-p0034-c002,34,500,2,Review,Mixed IDs; retain only the visually checked target span.
+length_review,K1-p0034-c004,34,3,0,Review,"Reference tail, outside selected criterion; exclude from reviewed text."
+one_id_at_most,K1-p0046-c001,46,500,3,Review,Mixed IDs; retain only the visually checked target span.
+one_id_at_most,K1-p0053-c001,53,500,2,Review,Mixed IDs; retain only the visually checked target span.
+one_id_at_most,K1-p0062-c001,62,499,2,Review,Mixed IDs; retain only the visually checked target span.
+length_review,K1-p0062-c003,62,96,0,Review,"Reference tail, outside selected criterion; exclude from reviewed text."
+one_id_at_most,K1-p0075-c001,75,499,3,Review,Mixed IDs; retain only the visually checked target span.
+length_review,K1-p0075-c004,75,13,0,Review,"Reference tail, outside selected criterion; exclude from reviewed text."

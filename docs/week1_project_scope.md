@@ -1,137 +1,108 @@
-# Part C Project Scoping Template
+# Week 1 Project Scope — ESGReady (Revised)
 
-Updated: 29 October 2026. Revised from the previous ESG project. Preliminary Week 1 scope; objectives and evaluation thresholds will be refined in Topic 2.
+**Project:** ESGReady — An Evidence-Grounded ESG Questionnaire Assistant for Malaysian SMEs
+**Domain:** Sustainability disclosure support for Malaysian manufacturing SMEs.
+**Revision date:** 5 November 2026.
+**Status:** Planning specification; implementation and evaluation have not yet been conducted.
 
-## Project Name
+## Problem statement
 
-**MeterInsight**
+An SME employee responding to a customer's ESG questionnaire must interpret the question, locate relevant guidance, find supporting company records and decide whether those records cover the requested information. A fluent draft may still rely on the wrong entity, a different reporting period or only part of the required evidence. ESGReady will assist this review and show the basis for each proposed answer, allowing the user to identify missing information before using a draft.
 
-*Subtitle: Document-Grounded Electricity Consumption Review Assistant.*
+The intended workflow needs language interpretation and document retrieval, combined with explicit checks on fields and metadata. Whether this combination performs better than basic retrieval and drafting is an evaluation question, not an assumed result. Evidence checking is limited to the supplied records; it does not establish whether those records are true in the real world.
 
-Adapted from the previously proposed **Uncertainty-Aware Smart-Meter Data-Quality and Consumption-Change Diagnosis** project. This semester prototype retains data-quality checking and learned consumption-pattern screening, while narrowing diagnosis to evidence-supported review. It does not establish the physical cause of a change, certify a meter fault, determine theft, adjudicate a bill, or control electrical equipment.
+## Evidence of the problem
 
-## Domain
+- **E1 — OECD:** Its CMM case study describes varied supply-chain requests and difficulties responding to them. This supports the need for a bounded disclosure-support workflow. See K3 in [source register](source_register.md).
+- **E2 — CMM:** Its disclosure guide and reporting template provide an established reference for preparing responses. See K1 in the source register.
 
-Energy / Smart Metering / Customer-Support Training
+These sources do not quantify unsupported-answer rates or prove product-market demand. Such claims are excluded. The previous unverified newspaper statistics and broad regulatory deadline claim have been removed.
 
-## Problem Statement
+## Initial related work / existing approaches
 
-Customer-support trainees reviewing electricity-consumption concerns need to distinguish observed usage changes, incomplete measurement data and billing concepts that require account-level verification. Public consumption records alone cannot establish why a particular Sarawak Energy bill increased, and a generic language model could incorrectly present a possible explanation as a confirmed cause. MeterInsight will combine lightweight machine-learning analysis of demonstration consumption records with explanations grounded in official Sarawak Energy documents, explicitly separating measured findings, general guidance and unresolved questions for human review.
+| Approach | What it already offers | Implication for this project |
+| --- | --- | --- |
+| CMM SEDG guide and disclosure template [R1] | A structured manual reference. | Retain the official reference and compare AI outputs with explicitly labelled criteria. |
+| Sunhat customer compliance review [R2] | Vendor-described document assessment and source-linked gaps. | Evidence checking is an existing capability; ESGReady cannot claim to invent it. |
+| DitchCarbon AI Survey Responder [R3] | Vendor-described questionnaire completion using existing company data. | Reusing data and drafting answers alone are insufficient differentiation. |
 
-## Evidence of the Problem
+References and access dates are in [source_register.md](source_register.md). These are desk-review findings, not hands-on vendor evaluations. There is no evidence here that the products lack SEDG support, nor that ESGReady will outperform them.
 
-**Evidence 1:** Sarawak Energy acknowledges concerns about unexpectedly high bills and describes individual reviews using account history, billing records and available meter information. This establishes a real review need and the limits of conclusions based on consumption alone; it does not establish that the existing review service is ineffective.
+## Project / engineering gap
 
-**Source / citation:** Sarawak Energy. (6 September 2026). *Grievance Mechanism for Customers to Address Billing Concerns.*
+For the selected SME workflow, the engineering task is to connect each supported question, disclosure reference and company record to an explicit evidence assessment, then test whether those checks reduce unsupported drafting without excessive abstention. The contribution is a reproducible, narrowly scoped prototype and an openly described benchmark with source-linked error analysis. It is a practical engineering gap; no scientific novelty or absence of market alternatives is claimed.
 
-https://www.sarawakenergy.com/media-info/media-releases/2026/grievance-mechanism-for-customers-to-address-billing-concerns
+## Project objectives
 
-**Evidence 2:** Sarawak Energy's bill-management documentation distinguishes current charges, overdue amounts and arrears, and explains available customer-support processes. These distinctions support the need to separate a change in measured energy use from a change in the amount payable.
+**O1:** To design a bounded questionnaire-review workflow that links supported questions to selected SEDG disclosures and company evidence, with explicit scope, source provenance and human review.
 
-**Source / citation:** Sarawak Energy. (n.d.). *Bill Management.* Accessed 29 October 2026.
+**O2:** To develop a prototype that identifies missing support, incomplete coverage and period/entity mismatches, and produces cited draft answers or requests for missing information.
 
-https://www.sarawakenergy.com/customers/bill-management
+**O3:** To evaluate mapping accuracy, evidence-checking performance, answer grounding, safe abstention and operational usability against a basic retrieval-and-drafting baseline using a documented held-out benchmark.
 
-## Initial Related Work (at least 3)
+## Intended users and operating context
 
-**Study / solution 1:** Sarawak Energy's existing SEB cares, Energy Insights and customer-review channels.
+Primary users are owners and finance, administration or operations staff in Malaysian manufacturing SMEs. The course prototype uses a single-user review session with fictional company records and English questions. Procurement and sustainability practitioners may review future demonstrations; their participation is not assumed or claimed.
 
-**Source / citation:** Sarawak Energy. (28 August 2026). *Reliable Electricity Supply Maintained as Dry Weather Continues* — describes hourly, daily and monthly consumption views through Energy Insights.
+## Supported tasks and boundaries
 
-https://www.sarawakenergy.com/media-info/media-releases/2026/reliable-electricity-supply-maintained-as-dry-weather-continues
+- Accept pasted questions or a CSV containing up to 10 items and a declared company, reporting period and entity/site boundary.
+- Accept up to 10 text-based PDF or CSV evidence files per session, at most 10 MB each and 100 PDF pages in total.
+- Map questions to the eight disclosure IDs listed in the Week 2 requirements, or state that an item is ambiguous or outside the supported catalogue.
+- Retrieve guidance and evidence separately; preserve document identity and page/row references.
+- Assess three issue families: missing support, incomplete coverage and period/entity mismatch.
+- Present cited draft answers, evidence gaps and clarification requests, with human review before export.
+- Provide brief source-grounded background explanations from K2 and K3 where relevant; do not add their content to the evidence criteria.
 
-Sarawak Energy. (6 September 2026). *Grievance Mechanism for Customers to Address Billing Concerns* — describes human review and the available channels, including Carina.
+## Data sources
 
-https://www.sarawakenergy.com/media-info/media-releases/2026/grievance-mechanism-for-customers-to-address-billing-concerns
+- **K1:** [SEDG Version 2](https://sedg.capitalmarketsmalaysia.com/wp-content/uploads/2025/07/SEDG-v2.pdf), disclosure guidance.
+- **K2:** [NSRF FAQ, 14 January 2026](https://www.sc.com.my/api/documentms/download.ashx?id=2efe731e-20cf-4710-8104-d07762a4637b), background context.
+- **K3:** [OECD CMM case study](https://www.oecd.org/en/publications/scaling-up-public-financial-and-non-financial-support-for-sme-sustainability_4b79ddf3-en/capital-markets-malaysia-simplified-esg-disclosure-guide-for-smes-in-supply-chains_250ebf4a-en.html), background context.
 
-**Key limitation:** Public descriptions do not expose these systems' complete analytical capabilities or provide a reproducible benchmark for this student study. They establish relevant existing services; they do not justify claiming that the company lacks anomaly detection or grounded explanations. The proposed project is an independent training and evaluation prototype, not a replacement service.
+The application uses the three public knowledge documents K1–K3 registered in [source_register.md](source_register.md). The disclosure catalogue is pinned to K1. Company evidence consists of authored fictional manufacturing-SME packs containing utility summaries, training records, incident registers, governance summaries and policies. Each record is labelled synthetic and assigned a company/session ID.
 
-**Study / solution 2:** Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.
-
-**Source / citation:** Lewis, P., et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS 2020.
-
-https://arxiv.org/abs/2005.11401
-
-**Key limitation:** Retrieval can provide source context, but does not itself analyse numeric consumption records or guarantee correct causal reasoning. Numerical findings need a separate analysis component and generated claims need source-support evaluation.
-
-**Study / solution 3:** Isolation Forest.
-
-**Source / citation:** Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). *Isolation Forest*. IEEE International Conference on Data Mining.
-
-https://research.monash.edu/en/publications/isolation-forest/
-
-Implementation reference: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
-
-**Key limitation:** An unusual pattern is not a labelled meter fault, a calibrated probability of failure, or proof of its cause. Performance depends on the reference history and features, and the model does not provide authoritative customer-service guidance.
-
-## Engineering Gap / Limitation
-
-**Gap / Limitation:** This project will investigate how to combine numeric pattern screening and official documentary evidence in a small, reproducible review workflow without converting anomaly scores into unsupported causal claims. The prototype will separate (1) deterministic data-quality findings, (2) learned unusual-pattern scores, (3) source-backed general explanations, and (4) questions that require authorised human review. Whether this combination improves understanding and review efficiency over simple analysis plus document search is an experimental question, not an established company capability gap.
-
-A document-only FAQ assistant would remove the original project's analytical purpose. Conversely, attaching unrelated PDFs to a time-series model would not constitute meaningful use of documents as data sources. Both the numeric and document components are part of the minimum scope.
-
-## Initial Project Objectives (2–3)
-
-**O1:** To design a bounded electricity-consumption review workflow for customer-support trainees using three official public documents and a public demonstration dataset, with explicit separation of measured evidence, anomaly indications and unresolved causes.
-
-**O2:** To develop a prototype integrating deterministic data-quality checks, one lightweight machine-learning pattern detector, and document-grounded explanations with citations and appropriate abstention and safety controls.
-
-**O3:** To evaluate the prototype against simple analytical and document-search baselines using controlled anomaly experiments and held-out question scenarios, measuring detection performance, numerical correctness, retrieval relevance, answer groundedness, appropriate abstention, latency and safety.
-
-## Target Users
-
-Primary intended users: electricity customer-support trainees and energy-awareness facilitators learning to review consumption concerns using demonstration cases. Student peers may participate in an initial usability study; their feedback will not be presented as validation by Sarawak Energy staff.
-
-Potential later users: authorised customer-support staff, subject to company review and local evaluation. The semester prototype is independent student work and is not an official Sarawak Energy service.
-
-## Data Sources (at least 2)
-
-**Source 1:** Sarawak Energy, *Smart Meter* — URL:
-
-https://www.sarawakenergy.com/customers/smart-meter
-
-Role: grounded answers about smart-meter functionality, readings and the distinction between meter replacement and consumption changes.
-
-**Source 2:** Sarawak Energy, *Bill Management* — URL:
-
-https://www.sarawakenergy.com/customers/bill-management
-
-Role: grounded explanations of billing components and official review channels. Limit retrieval to the domestic-consumption review topic; omit commercial tariff calculations, penalties, legal interpretation and account adjudication from the prototype's answer scope.
-
-**Source 3:** Sarawak Energy, *Grievance Mechanism for Customers to Address Billing Concerns* (6 September 2026) — URL:
-
-https://www.sarawakenergy.com/media-info/media-releases/2026/grievance-mechanism-for-customers-to-address-billing-concerns
-
-Role: explain what evidence is used in an individual review and when a question needs official assistance. Historical temporary-counter arrangements will not be presented as current.
-
-These are three separate publicly accessible web documents used by the explanation component, not merely bibliography entries. Part C does not explicitly restrict documents to PDF. Record titles, URLs, access dates, document versions and selected sections. Public access is not permission to redistribute: retain source links in GitHub and download or cache content only as permitted.
-
-**Supplementary numeric dataset:** UK Domestic Appliance-Level Electricity (UK-DALE), by Jack Kelly and William Knottenbelt.
-
-Dataset and access instructions: https://jack-kelly.com/data/
-
-Paper: https://doi.org/10.1038/sdata.2015.7
-
-Role: a small subset of whole-house time-series data for testing consumption-pattern analysis. Use the low-frequency whole-house channels; appliance disaggregation and high-frequency waveform analysis are outside scope. Convert power to interval energy with timestamp-aware integration and explicit missing-data handling. Do not treat watts as kilowatt-hours, or missing values as zero usage.
-
-UK-DALE describes five UK homes. It does not provide Sarawak customer records, verified meter-fault labels or billing-dispute outcomes. All cases must be labelled as demonstrations, without applying Malaysian tariffs to UK households. Dataset reuse and any derived-file sharing must follow the dataset's terms.
-
-Minimum implementation: curated demonstration records; explicit units and coverage checks; one Isolation Forest model on daily features; a rolling same-weekday baseline; retrieval over the three documents; a pretrained language model constrained to supplied evidence; and a small interface. Do not train a large language model. Compare retrieval-augmented answers with keyword search and a full-document-context baseline because the initial corpus is small.
-
-Evaluation design: use chronological training/development/test partitions without overlapping windows; fit preprocessing on training data only. Test controlled missing blocks, flatlines and sustained shifts with recorded injection labels, while recognising that these are simulations rather than verified physical faults. On untouched data report alert rate and reviewed examples, not an unverified false-positive rate. Use a held-out question set covering factual, numeric-plus-document, insufficient-evidence and unsafe requests. Record claim support, citation correctness, numerical errors, abstention, latency and run cost. Lock the test set before tuning prompts or thresholds.
+Public corporate reports may later form a separate exploratory challenge set. They must remain attached to their actual entity and must never be presented as evidence for a fictional SME. They are not required for the primary benchmark and are not included in the current package.
 
 ## Similar to EduAdvisor
 
-Both systems address a defined user group, consult a bounded set of authoritative public documents, and generate source-supported answers with limits on unsupported claims. Both require requirements, architecture, data documentation, prompts, evaluation evidence and responsible-AI records in GitHub. The engineering process includes retrieval, citations, abstention and objective testing.
+Both use approved document sources, cited responses, explicit scope controls and later evaluation of usefulness and reliability.
 
 ## Different from EduAdvisor
 
-MeterInsight addresses electricity-consumption review rather than course and graduation advice. It combines numeric analysis and a small anomaly detector with documentary explanations. Its data-quality checks and calculations are deterministic, while learned models identify patterns and interpret questions. It must distinguish measured kWh changes from changes in a bill's payable amount, and it cannot infer an individual account's actual cause from general documents. It has no connection to live meters, customer accounts or operational control systems.
+ESGReady handles a short questionnaire and an evidence pack, keeps guidance separate from company records, flags evidence gaps, and returns a structured review table. It evaluates defect detection and the risk of marking unsupported responses as ready for review.
 
-## Responsible AI Risks (at least 2)
+## Responsible AI risks
 
-**Risk 1: Hallucination, unsupported causality and misleading confidence.** A generated response could claim that an unusual pattern proves a defective meter, a particular appliance, or wrongdoing. Controls: separate observations from general explanations; cite applicable documents; state unknowns; do not display anomaly scores as fault probabilities; abstain from physical diagnosis, accusations and bill adjudication. Measure unsupported-claim and inappropriate-certainty rates.
+| Risk | Planned control |
+| --- | --- |
+| Unsupported company claims | Evidence citations, explicit gaps and withholding unsupported assertions. |
+| False assurance | “Draft for human review” label; no compliance/certification claims; measure false-ready rate. |
+| Wrong entity or period | Explicit metadata, session isolation and boundary checks. |
+| Instructions hidden in evidence | Treat retrieved text as untrusted data; constrain outputs and test malicious documents. |
+| Confidentiality | Synthetic inputs for the course, no real personal records, no secrets or evidence text in public logs. |
+| Misleading evaluation | Held-out company packs, valid negative examples, independent label review and results reported with denominators. |
 
-**Risk 2: Privacy and data governance.** Actual customer bills and usage records can reveal identities and household routines. Controls: use public or synthetic demonstration cases; do not collect account numbers, addresses or private bills in the semester prototype; keep credentials out of GitHub; exclude restricted documents and raw data without redistribution permission; document any external-model data flow.
+## Scope exclusions and stretch goals
 
-**Risk 3: Safety, representativeness and stale guidance.** UK usage patterns may not generalise to Sarawak, and obsolete instructions or generated repair advice could mislead users. Controls: label domain limitations; use dated, versioned official sources; test conflicts and expired announcements; provide no wiring, meter-opening, disconnection, tariff-adjudication or autonomous operational instructions; direct unresolved cases to authorised support. Treat retrieved content as evidence, not instructions that can override the system's safety and scope rules. Evaluation success on a small test set is not deployment certification.
+**Excluded from V1:** all-sector/all-language coverage; full-standard compliance assessment; legal advice; authenticity verification; scanned-document OCR; proprietary questionnaires; autonomous submission; emissions calculations and factor registries; multi-user production deployment; comprehensive contradiction detection.
+
+**Stretch goals only after core evaluation:** evidence reuse across questionnaires, a limited contradiction check, and a separately specified deterministic calculation module. None is required to pass the V1 evaluation.
+
+## Proposed AI approach and expected outcomes
+
+A pretrained language model will interpret questions and assess whether supplied passages support the requested information. Deterministic metadata/schema checks will constrain the result. Separate retrieval provides context for this semantic assessment; the task is not solely finding documents. Candidate model/provider choices remain open, and no large model needs training.
+
+The expected later outcomes are a demonstrator, a documented synthetic benchmark and a baseline comparison that reports failures as well as successes. The current deliverables are the Lab 1 project documents and Topic 2 plan; the application and benchmark are not implemented.
+
+## Evaluation focus
+
+Can explicit evidence checks help produce supported, traceable drafts and actionable information requests, compared with the same retrieval-and-drafting workflow without the checker? The evaluation plan specifies a 160-case held-out synthetic test set plus separate safety and usability checks. These are planned datasets, not completed experiments. See [week2_evaluation_criteria.md](week2_evaluation_criteria.md).
+
+## Constraints and feasibility
+
+The project assumes an undergraduate course timeline, no confidential customer data, a modest model-service budget and no model training requirement. The implementation should begin with one orchestrated workflow and a small versioned criteria catalogue; specific frameworks and model choices remain open. English/manufacturing-only coverage limits generalisability. A peer usability check cannot establish adoption by real SMEs.
+
+## Changes from the earlier draft
+
+The revision narrows the domain and disclosure coverage, replaces the evidence-validation title, acknowledges competing evidence-checking products, separates background context from disclosure criteria, removes mandatory emissions tooling, simplifies the objectives and strengthens the evaluation plan.

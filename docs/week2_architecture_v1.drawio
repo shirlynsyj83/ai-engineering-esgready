@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="esgready-v1" name="ESGReady V1">
+    <mxGraphModel dx="1900" dy="1780" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1900" pageHeight="1780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header_bg" value="" style="fillColor=#142b45;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="0" y="0" width="1900" height="145" />
+        </mxCell>
+        <mxCell id="title" value="ESGReady | V1 conceptual architecture" style="text;html=0;align=left;verticalAlign=top;fontSize=43;fontColor=#ffffff;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="33" width="968" height="58" />
+        </mxCell>
+        <mxCell id="subtitle" value="Questionnaire review with traceable evidence checks" style="text;html=0;align=left;verticalAlign=top;fontSize=24;fontColor=#c4d9e9;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="62" y="96" width="661" height="39" />
+        </mxCell>
+        <mxCell id="lane1" value="DOCUMENTS &amp; PROVENANCE" style="text;html=0;align=left;verticalAlign=top;fontSize=20;fontColor=#53677d;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="172" width="347" height="35" />
+        </mxCell>
+        <mxCell id="lane2" value="REVIEW WORKFLOW" style="text;html=0;align=left;verticalAlign=top;fontSize=20;fontColor=#53677d;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="172" width="249" height="35" />
+        </mxCell>
+        <mxCell id="lane3" value="EVALUATION &amp; CONTROLS" style="text;html=0;align=left;verticalAlign=top;fontSize=20;fontColor=#53677d;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1430" y="172" width="312" height="35" />
+        </mxCell>
+        <mxCell id="U" value="SME staff / reviewer&#10;&#10;" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e9f1fb;strokeColor=#2769b0;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="225" width="540" height="80" />
+        </mxCell>
+        <mxCell id="C1" value="C1  Application &amp; session&#10;&#10;Questions + company / period / sites&#10;Uploads, review state, clear session" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#2769b0;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="365" width="540" height="120" />
+        </mxCell>
+        <mxCell id="C2" value="C2  Input &amp; scope control&#10;&#10;Validate format, limits and boundaries&#10;Clarify, route or reject visibly" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff5e5;strokeColor=#ac6b13;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="555" width="540" height="125" />
+        </mxCell>
+        <mxCell id="C3" value="C3  Mapping &amp; knowledge access&#10;&#10;Map to supported disclosure IDs&#10;Retrieve guidance and case evidence&#10;Preserve source locations" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf6f3;strokeColor=#13756d;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="760" width="540" height="165" />
+        </mxCell>
+        <mxCell id="C4" value="C4  AI evidence assessment&#10;&#10;Apply typed, versioned criteria&#10;Flag gaps and boundary mismatches&#10;Choose status / request information" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf6f3;strokeColor=#13756d;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="1000" width="540" height="165" />
+        </mxCell>
+        <mxCell id="C5" value="C5  AI draft &amp; output validation&#10;&#10;Supported text + citations + flags&#10;Check schema, status and sources" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf6f3;strokeColor=#13756d;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="1240" width="540" height="145" />
+        </mxCell>
+        <mxCell id="C6" value="C6  Human review &amp; draft export&#10;&#10;Inspect, edit and acknowledge&#10;Keep draft label and unresolved gaps" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff5e5;strokeColor=#ac6b13;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="690" y="1460" width="540" height="145" />
+        </mxCell>
+        <mxCell id="C0" value="C0  Document preparation&#10;&#10;Register and parse documents&#10;Keep pages / rows and versions&#10;Tag source role and case ID" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#2769b0;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="365" width="440" height="180" />
+        </mxCell>
+        <mxCell id="D1" value="D1  Approved knowledge&#10;&#10;K1: disclosure guidance&#10;K2 / K3: background context&#10;Versioned criteria + provenance" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f1edfa;strokeColor=#665299;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="735" width="440" height="200" />
+        </mxCell>
+        <mxCell id="D2" value="D2  Company evidence&#10;&#10;Synthetic records and chunks&#10;Isolated by company / session&#10;Period and entity metadata" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f1edfa;strokeColor=#665299;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1060" width="440" height="180" />
+        </mxCell>
+        <mxCell id="C7" value="C7  Evaluation point&#10;&#10;Mapping, flags and citations&#10;Timings, errors and versions&#10;Minimal routine logs&#10;Synthetic evaluation outputs" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff5e5;strokeColor=#ac6b13;strokeWidth=2;fontColor=#142b45;fontSize=22;spacing=18;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1430" y="760" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="U" target="C1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="C1" target="C2">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="In scope" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="C2" target="C3">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" value="Question + criteria + evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="C3" target="C4">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="Findings + proposed status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="C4" target="C5">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="Validated draft / visible issue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="C5" target="C6">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="Uploaded files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.0;exitY=0.5;entryX=1.0;entryY=0.3333333333333333;" edge="1" parent="1" source="C1" target="C0">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8" value="Approved sources&#10;&amp; criteria catalogue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="C0" target="D1">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=0.0;exitY=0.5555555555555556;entryX=0.0;entryY=0.5;" edge="1" parent="1" source="C0" target="D2">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="25" y="465" />
+              <mxPoint x="25" y="1150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="Guidance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=1.0;exitY=0.4;entryX=0.0;entryY=0.3333333333333333;" edge="1" parent="1" source="D1" target="C3">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e11" value="Case evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=0;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.7575757575757576;" edge="1" parent="1" source="D2" target="C3">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="610" y="1150" />
+              <mxPoint x="610" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="Scope / error&#10;status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#ac6b13;strokeWidth=2;dashed=1;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=1.0;exitY=0.48;entryX=1.0;entryY=0.5172413793103449;" edge="1" parent="1" source="C2" target="C5">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1320" y="615" />
+              <mxPoint x="1320" y="1315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="Run records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=1;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=1.0;exitY=0.24242424242424243;entryX=0.0;entryY=0.18181818181818182;" edge="1" parent="1" source="C3" target="C7">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=1;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=1.0;exitY=0.48484848484848486;entryX=0.0;entryY=0.5909090909090909;" edge="1" parent="1" source="C4" target="C7">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1370" y="1080" />
+              <mxPoint x="1370" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#60788f;strokeWidth=2;dashed=1;fontSize=18;labelBackgroundColor=#f6f8fc;exitX=1.0;exitY=0.7241379310344828;entryX=0.0;entryY=0.8636363636363636;" edge="1" parent="1" source="C5" target="C7">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1400" y="1345" />
+              <mxPoint x="1400" y="950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1" value="SOURCE ROLES&#10;&#10;Guidance describes disclosures.&#10;Evidence supports company claims.&#10;Project rules assess sufficiency.&#10;&#10;These roles remain separate.&#10;Documents are untrusted input." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf0f7;strokeColor=none;fontSize=20;align=left;spacing=20;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1340" width="440" height="265" />
+        </mxCell>
+        <mxCell id="n2" value="V1 BOUNDARIES&#10;&#10;English • manufacturing SMEs&#10;Eight selected disclosures&#10;Three evidence issue families&#10;&#10;Drafts require human review.&#10;No automatic submission.&#10;No compliance assurance." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#eaf0f7;strokeColor=none;fontSize=20;align=left;spacing=20;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1460" y="1090" width="380" height="315" />
+        </mxCell>
+        <mxCell id="footer" value="Solid arrows: information flow     Dashed arrows: control / evaluation paths" style="text;html=0;align=left;verticalAlign=top;fontSize=21;fontColor=#53677d;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1662" width="805" height="36" />
+        </mxCell>
+        <mxCell id="footer2" value="Conceptual functions, not separate servers. Specific models and frameworks remain open.  |  5 November 2026" style="text;html=0;align=left;verticalAlign=top;fontSize=20;fontColor=#53677d;fontStyle=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1703" width="1141" height="35" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
